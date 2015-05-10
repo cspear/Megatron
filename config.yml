@@ -1,0 +1,9 @@
+optimusPrime: 
+liveMSO: false
+liveMSOLocation: 
+core: 
+recurrsive: true
+deleteresults: false
+runtilfailure: false
+exitonfailure: false
+
