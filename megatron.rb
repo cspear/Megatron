@@ -43,3 +43,10 @@ else
 	exit 0
 end
 
+
+#TODO
+#setup gemfile
+#fix readme
+#start adding spec files
+#finish installing savon
+#
