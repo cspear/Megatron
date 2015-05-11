@@ -1,7 +1,8 @@
-optimusPrime: 
+optimusPrime: http://www.google.com
 liveMSO: false
 liveMSOLocation: 
-core: 
+core: nil
+testsuite: /projects/Megatron/example_test_suite.yml
 recurrsive: true
 deleteresults: false
 runtilfailure: false

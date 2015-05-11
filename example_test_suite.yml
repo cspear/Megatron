@@ -1,17 +1,17 @@
 ---
-testsuite: "the name of my testsuite if I want to name it"
-  # comments are allowed
-  - testname:
+testsuitename: name of test suite if I want it.
+tests:
+  - testname: test 1
     mso: 4.3
     aff: 4.1
-    aRequest: absolute or relative path to location of file
-    bVerify: absolute or relative path to location of file
-    cPrimer: absolute or relative path to location of file
-    dVerify: absolute or relative path to location of file
+    aRequest: /projects/Megatron/example_aRequest.xml
+    bVerify: /projects/Megatron/example_bVerify.xml
+    cPrimer: /projects/Megatron/example_cPrimer.xml
+    dVerify: /projects/Megatron/example_dVerify.xml
     protocol: 200
-    queryoffer: true
-      # comments are allowed
-  - testname:
+    queryoffer: false
+ # comments are allowed
+  - testname: test 5
     mso: 4.3
     aff: 4.1
     aRequest: absolute or relative path to location of file

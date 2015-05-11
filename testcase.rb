@@ -8,25 +8,24 @@
 # mso version
 
 
-class Testcase(arguments, number, mso, aff, aRequest, bVerify, cPrimer, dVerify, protocol)
+class Testcase
 
 	MSO = [4.1, 4.3]
 	AFF = [4.1, 4.3]
 
 
-	def initialize(aRequest, bVerify, cPrimer, dVerify, mso, aff)
-		raise "MSO version #{mso} is invalid" if !MSO.include?(mso)
-		raise "AFFILIATE version #{aff} is invalid" if !MSO.include?(aff)
-
-		@mso = mso  					# MSO version
-		@aff = aff   					# Affiliate version
-		@aRequest     = aRequest		# file path
-		@bVerify      = bVerify			# file path
-		@cPrimer	  = cPrimer			# file path
-		@dVerify	  = dVerify			# file path
-		@protocol 	  = protocol		# 200 or 500 protocol response
-		@queryoffer	  = queryoffer  	# am I queryoffer request
-
+	def initialize(arguments, number, testvalues)
+		@mso = testvalues['mso']# MSO version
+		@aff = testvalues['aff']# Affiliate version
+		@aRequest = testvalues['aRequest']# file path
+		@bVerify = testvalues['bVerify']# file path
+		@cPrimer = testvalues['cPrimer']# file path
+		@dVerify = testvalues['dVerify']# file path
+		@protocol = testvalues['protocol']# 200 or 500 protocol response
+		@queryoffer = testvalues['queryoffer']# am I queryoffer request	
+		
+		# raise "MSO version #{mso} is invalid" if !@mso.include?(@mso)
+		# raise "AFFILIATE version #{aff} is invalid" if !@aff.include?(@aff)
 
 		# ?? move get trackingID (or use dummy value) here & update 
 		prep_aRequest
@@ -42,24 +41,24 @@ class Testcase(arguments, number, mso, aff, aRequest, bVerify, cPrimer, dVerify,
 	end
 
 	def prep_aRequest
-		if queryoffer == false
-			if mso == 4.1
+		if @queryoffer == false
+			if @mso == 4.1
 				#send request, wait for response.  
 				#pull trackingID & return value
-			elsif mso == 4.3
+			elsif @mso == 4.3
 				#send request, wait for response.  
 				#pull trackingID & return value
 			end
 		else
-			if mso == 4.1
+			if @mso == 4.1
 
-			elsif mso == 4.3
+			elsif @mso == 4.3
 
 			end
 		end
 	end	
 
-	def insert_TrackingID(A-Request)
+	def insert_TrackingID(aRequest)
 
 	end
 
@@ -80,4 +79,7 @@ class Testcase(arguments, number, mso, aff, aRequest, bVerify, cPrimer, dVerify,
 		#insert customer name/id depending on mso.
 	end
 
+	def save_test_file_results
+
+	end
 end
